@@ -8,6 +8,7 @@ import be.pxl.ja.streamingservice.model.TVShow;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class ContentRepository {
@@ -42,5 +43,9 @@ public class ContentRepository {
 		contentList.add(eigenKweek);
 
 		return contentList;
+	}
+
+	public HashSet<Content> getContentSet(){
+		return new HashSet<Content>(getContentList());
 	}
 }

@@ -6,7 +6,7 @@ import java.util.Map;
 public class PhonebookDemo {
 
 	public static void main(String[] args) {
-		Map<String,String> phoneBook = new HashMap<>();
+		Map<String, String> phoneBook = new HashMap<>();
 		phoneBook.put("Ben", "+32 11 77 55 10");
 		phoneBook.put("Gerrit", "+32 11 77 55 16");
 		phoneBook.put("Rudy", "+ 32 11 77 56 91");
@@ -15,5 +15,12 @@ public class PhonebookDemo {
 		System.out.println(phoneBook.get("Ben"));
 		System.out.println(phoneBook.containsKey("Els"));
 		System.out.println(phoneBook.values());
+
+		for (String key : phoneBook.keySet()
+				) {
+			System.out.println("Key: " + key);
+			System.out.println("Value: " + phoneBook.get(key));
+		}
 	}
+
 }
